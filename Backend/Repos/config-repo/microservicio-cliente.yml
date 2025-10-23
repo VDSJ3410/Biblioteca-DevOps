@@ -1,0 +1,8 @@
+spring: 
+  application: 
+    name: microservicio-cliente
+    
+mensaje: "Hola desde el config-server"
+
+server: 
+  port: 8081
