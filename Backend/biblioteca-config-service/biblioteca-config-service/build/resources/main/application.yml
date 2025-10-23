@@ -1,0 +1,16 @@
+spring:
+  application:
+    name: biblioteca-config-service
+  cloud:
+    config:
+      server:
+        git:
+          uri: https://github.com/VDSJ3410/config-repo.git
+          default-label: main
+server:
+  port: 8005
+login:
+  label:
+    org.springframework.cloud.config: DEBUG
+    org.eclipse.jgit: DEBUG
+    org.springframework.cloud.vault: DEBUG
