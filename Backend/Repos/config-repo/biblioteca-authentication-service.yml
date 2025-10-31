@@ -1,0 +1,31 @@
+server:
+ port: 8009
+spring:
+ application:
+  name: biblioteca-authentication-service
+ datasource:
+    url: jdbc:oracle:thin:@localhost:1521:xe
+    username: biblio
+    password: libro
+ jpa:
+    hibernate:
+      ddl-auto: none
+    generate-ddl: false
+    show-sql: true
+    properties:
+      hibernate:
+        dialect: org.hibernate.dialect.OracleDialect
+jwt: 
+  secret: SjFkWjI5ajFic2RzNTZjMnl6ZHNkNHU4MjFlNGY3ZzZoc2Q3ZDhkM2l3cTB2NHV3Z3M5cmZjN2E0cTNyMzB1
+eureka:
+  client:
+    serviceUrl:
+     defaultZone: http://localhost:8006/eureka/
+    registerWithEureka: true
+    fetchRegistry: true
+    healthcheck:
+      enabled: true
+  instance:
+    leaseRenewalIntervalInSeconds: 5
+    leaseExpirationDurationInSeconds: 15
+    preferIpAddress: true
